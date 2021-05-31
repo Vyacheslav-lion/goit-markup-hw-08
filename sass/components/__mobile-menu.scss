@@ -1,0 +1,124 @@
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 48px 40px;
+
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform $timing-function, opacity $timing-function;
+
+  z-index: 100;
+
+  @media screen and (min-width: 786px) {
+    display: none;
+  }
+}
+
+.menu-container.is-open {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.menu-container .menu-toggle__close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $black-text-color;
+  background-color: $color-white;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+
+  &:hover,
+  &:focus {
+    color: $decoration-color;
+    cursor: pointer;
+  }
+}
+
+.menu-toggle__button-icon {
+  width: 19px;
+  height: 19px;
+  fill: currentColor;
+}
+
+.nav-mobile,
+.mobile-communication__list,
+.mobile-communication__sites {
+  padding: 0;
+}
+
+.nav-mobile__link {
+  display: block;
+  margin-bottom: 32px;
+  color: $nav-color;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+
+  &:hover,
+  &:focus {
+    color: $decoration-color;
+  }
+}
+
+.nav-mobile__link--active {
+  color: $decoration-color;
+}
+
+.mobile-communication-tel {
+  display: block;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: $decoration-color;
+
+  margin-bottom: 32px;
+}
+
+.mobile-communication-email {
+  display: block;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+  color: $primary-text-color;
+
+  margin-bottom: 64px;
+}
+
+.mobile-communication__sites {
+  display: flex;
+}
+
+.mobile-communication__site-link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+
+  color: $decoration-color;
+}
+
+.mobile-communication__site-item:not(:last-child) {
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.mobile-communication__site-item:not(:first-child) {
+  padding-left: 10px;
+}

@@ -1,0 +1,109 @@
+.team {
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: $btn-bg-color;
+}
+
+.person {
+  margin: 0;
+  padding: 0;
+  @media screen and(min-width: 768px) and(max-width: 1199px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
+
+  @media screen and(min-width: 1200px) {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+
+.person__card {
+  text-align: center;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  background-color: $color-white;
+
+  &:not(:last-child) {
+    @media screen and(max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and(min-width: 768px) and(max-width: 1199px) {
+    margin-bottom: 0px;
+    margin-left: 30px;
+    margin-top: 30px;
+    flex-basis: calc(100% / 2 - 30px);
+  }
+
+  @media screen and(min-width: 1200px) {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.person__thumb {
+  object-fit: cover;
+}
+
+.person__name {
+  color: $nav-color;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.person__poition {
+  color: $primary-text-color;
+  font-size: 16px;
+  line-height: 1.18;
+  margin-bottom: 16px;
+}
+
+.socials {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-right: 32px;
+  padding-bottom: 30px;
+  padding-left: 32px;
+
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    padding-right: 64px;
+    padding-left: 64px;
+  }
+
+  @media screen and (min-width: 380px) and(max-width: 768px) {
+    padding-right: 76px;
+    padding-left: 76px;
+  }
+}
+
+.socials__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $social-color;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  &:hover,
+  &:focus {
+    color: $color-white;
+    background-color: $decoration-color;
+  }
+}
+
+.socials__icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}

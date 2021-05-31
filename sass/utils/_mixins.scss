@@ -1,0 +1,7 @@
+@mixin pageTitles($font-size, $font-weight, $line-height, $letter-spacing, $text-align) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+  text-align: $text-align;
+}
